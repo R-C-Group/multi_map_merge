@@ -1,0 +1,28 @@
+# local_costmap:
+#   global_frame: odom
+#   robot_base_frame: base_footprint
+
+#   update_frequency: 10.0
+#   publish_frequency: 10.0
+#   transform_tolerance: 0.5  
+
+#   static_map: false  
+#   rolling_window: true
+#   width: 3
+#   height: 3
+#   resolution: 0.05
+
+  local_costmap:
+  global_frame: amcl_tf #vlp_odom  #odom            #地图框架设置
+  robot_base_frame: base_footprint            #机器人底座框架设置
+
+  update_frequency: 10.0                   #更新周期（根据传感器数据，本地地图更新的频率，单位为次/秒。对于很慢的计算机，你可能需要减小这个值）
+  publish_frequency: 10.0                  #发布周期（我们想更新已经发布出去的本地地图，所以我们会把这个值设为非零。一秒一次应该足够了，除非你的机器人要移动得更快）
+  transform_tolerance: 0.5                    #允许的转换时间
+
+  static_map: false                #是否使用给定地图的设置
+  rolling_window: true            #局部地图窗口设置
+  width: 3                       #局部地图窗口宽度
+  height: 3                      #局部地图窗口高度
+  resolution: 0.05               #局部地图窗口分辨率(米/单元格)
+  
